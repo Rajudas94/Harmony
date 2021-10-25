@@ -58,8 +58,7 @@ def func():
     
     canvas_for_image = Canvas(window, bg='black', height=170, width = 290)
     canvas_for_image.pack()
-
-    global t1
+    
 
     def show_details(play_song):
     
@@ -86,7 +85,7 @@ def func():
 
             timeformat = '{:02d}:{:02d}'.format(mins, secs)
             length = f'{round(t)//60}:{round(t)%60}'
-            music_progress.set(timeformat)          #main thread not in main loop
+            music_progress.set(timeformat)          
             song_length_label.set(length)
             #song_progress['value']+= 0.40
             time.sleep(1)
@@ -120,7 +119,6 @@ def func():
     buttonFrame.pack()
 
 
-
     def stop_song():
     
         pygame.mixer.music.stop()
@@ -133,7 +131,6 @@ def func():
         volume = float(x)/100
         mixer.music.set_volume(volume)
     #music_player_controls["text"] = "{}".format(round(volume*100))
-    
     
 
     def forward_song():
